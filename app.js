@@ -3,6 +3,7 @@ var path = require('path');
 var logger = require('morgan');
 var index = require('./routes/index');
 var contact = require('./routes/contact');
+var db = require("./database.js");
 const bodyParser = require('body-parser');
 
 var app = express();
