@@ -25,6 +25,14 @@ router.get('/eventos', function(req, res, next) {
   res.render('eventos', {page:'Eventos', menuId:'eventos'});
 });
 
+router.get('/livros', function(req, res, next) {
+  res.render('livros', {page:'Livros', menuId:'livros'});
+});
+
+router.get('/mundo', function(req, res, next) {
+  res.render('mundo', {page:'Mundo', menuId:'mundo'});
+});
+
 router.get('/contato_envio', (req, res) => {
   res.render('contact_send', {page:'Contato', menuId:'contact'});
 });
