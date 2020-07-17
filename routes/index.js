@@ -51,15 +51,14 @@ router.post('/newsletter', function(req, res, next) {
 
    console.log(req.body.email)
 
-   var sql ='INSERT INTO newsletter (name) VALUES (?)'
+   var sql ='INSERT INTO newsletter (email) VALUES (?)'
     db.run(sql, [req.body.email], function (err, result) {
         if (err){
-          console.log('Erro na inserção SQLite.')
+          console.log('Erro na inserção SQLite.', err.message)
             /*res.status(400).json({"error": err.message})*/
             return;
         }
      });
-
   res.redirect('/newsletter');
 
 });
