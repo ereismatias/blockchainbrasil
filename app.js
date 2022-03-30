@@ -24,9 +24,10 @@ app.use('/', index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Ops, página não encontrada!');
+  res.render('e404', {page:'404 - Página Não Encontrada', menuId:'e404'});
+  /*var err = new Error('Ops, página não encontrada!');
   err.status = 404;
-  next(err);
+  next(err);*/
 });
 
 // error handler

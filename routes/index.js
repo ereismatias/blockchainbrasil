@@ -29,6 +29,11 @@ router.get('/livros', function(req, res, next) {
   res.render('livros', {page:'Livros', menuId:'livros'});
 });
 
+
+router.get('/artigos', function(req, res, next) {
+  res.render('artigos', {page:'Artigos', menuId:'artigos'});
+});
+
 router.get('/mundo', function(req, res, next) {
   res.render('mundo', {page:'Mundo', menuId:'mundo'});
 });
